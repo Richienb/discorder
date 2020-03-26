@@ -1,41 +1,41 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# discorder [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/discorder/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/discorder)
 
-My awesome module.
+Create Discord bots.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/discorder.png)](https://npmjs.com/package/discorder)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install discorder
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const discorder = require("discorder");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+const bot = discorder("bot token");
+
+client.on("ready", () => {
+	console.log("Connected!");
+});
 ```
 
 ## API
 
-### theModule(input, options?)
+### discorder(token, options?)
 
-#### input
+Returns a new [`Discord.Client`](https://discord.js.org/#/docs/main/stable/class/Client) instance.
+
+#### token
 
 Type: `string`
 
-Lorem ipsum.
+The Discord bot token.
 
 #### options
 
 Type: `object`
 
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+Same as options for [`Discord.Client`](https://discord.js.org/#/docs/main/stable/class/Client).

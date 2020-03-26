@@ -1,13 +1,6 @@
 const test = require("ava")
-const theModule = require(".")
+const discorder = require(".")
 
 test("main", (t) => {
-	t.throws(() => {
-		theModule(123)
-	}, {
-		instanceOf: TypeError,
-		message: "Expected a string, got number",
-	})
-
-	t.is(theModule("unicorns"), "unicorns & rainbows")
+	t.is(typeof discorder, "function")
 })

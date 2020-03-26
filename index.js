@@ -1,7 +1,12 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-	if (typeof input !== "string") throw new TypeError(`Expected a string, got ${typeof input}`)
+const Discord = require("discord.js")
 
-	return `${input} & ${postfix}`
+module.exports = (token, options = {}) => {
+	if (typeof token !== "string") throw new TypeError("Token was not specified!")
+
+	const client = new Discord.Client(options)
+	client.login(token)
+
+	return client
 }
